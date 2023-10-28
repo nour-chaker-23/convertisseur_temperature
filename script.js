@@ -5,23 +5,27 @@ function convertTemperature() {
   var fahrenheit = (celsius * 9) / 5 + 32;
   fahrenheitInput.value = fahrenheit;
 
-  celsiusInput.classList.add('temperature-input-converted');
-  fahrenheitInput.classList.add('temperature-input-converted');
-  document
-    .querySelector('.temperature-heading')
-    .classList.add('temperature-heading-converted');
-  document
-    .querySelector('.convert-button')
-    .classList.add('convert-button-converted');
+  celsiusInput.classList.add('fade-in');
+  fahrenheitInput.classList.add('fade-in');
+  document.querySelector('.temperature-heading').classList.add('fade-in');
+  document.querySelector('.convert-button').classList.add('fade-in');
+
+  document.querySelector('.convert-button').classList.add('clicked-button');
+  celsiusInput.addEventListener('input', function () {
+    if (celsiusInput.value !== '') {
+      celsiusInput.classList.add('filled-input');
+    } else {
+      celsiusInput.classList.remove('filled-input');
+    }
+  });
 
   setTimeout(function () {
-    celsiusInput.classList.remove('temperature-input-converted');
-    fahrenheitInput.classList.remove('temperature-input-converted');
-    document
-      .querySelector('.temperature-heading')
-      .classList.remove('temperature-heading-converted');
+    celsiusInput.classList.remove('fade-in');
+    fahrenheitInput.classList.remove('fade-in');
+    document.querySelector('.temperature-heading').classList.remove('fade-in');
+    document.querySelector('.convert-button').classList.remove('fade-in');
     document
       .querySelector('.convert-button')
-      .classList.remove('convert-button-converted');
-  }, 300);
+      .classList.remove('clicked-button');
+  }, 900);
 }

@@ -12,24 +12,64 @@ input[type='number'] {
   width: 60px;
   padding: 5px;
   margin: 10px;
+  &:hover {
+    transform: scale(1.15);
+    background-color: #38f71f;
+    cursor: pointer;
+    border-radius: 10rem;
+  }
 }
 
 button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #38f71f;
   color: #fff;
   border: none;
   cursor: pointer;
-}
-
-.temperature-input {
-  transition: all 0.3s ease-in-out;
+  border-radius: 10rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: transform 400ms;
+  &:hover {
+    transform: scale(1.15);
+  }
 }
 
 .temperature-heading {
   transition: color 0.3s ease-in-out;
 }
 
+.temperature-input {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
 .convert-button {
   transition: background-color 0.3s ease-in-out;
+}
+
+.temperature-input.fade-in {
+  background-color: #e74c3c;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.convert-button.fade-in {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.original-button {
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.clicked-button {
+  background-color: #e74c3c;
+}
+
+.filled-input {
+  background-color: #f38471;
+  color: #fff;
 }
