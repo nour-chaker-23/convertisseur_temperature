@@ -114,7 +114,7 @@ It refers to the capability of the application to handle multiple units of tempe
 
 This project is licensed under the XXX License.
 
-## Authors
+## Authors 
 
 Rania HAMMAMI && D-INFO TD2 TP2 
 
