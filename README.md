@@ -29,6 +29,6 @@ This project is licensed under the XXX License.
 
 ## Authors
 
-Rania HAMMAMI && D-INFO TD2 TP2 
+Nour Chaker && D-INFO TD2 TP2 
 
 
